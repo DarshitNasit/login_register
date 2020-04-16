@@ -1,0 +1,5 @@
+.env
+ignore_text
+node_modules
+package-lock.json
+set_git.exe

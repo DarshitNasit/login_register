@@ -1,0 +1,11 @@
+extends layout2.pug
+
+block content
+    .row.mt-5
+        .col-md-6.m-auto
+            .card.card-body
+                h1.text-center.mb-3 Dashboard
+                != messages('message', local)
+                p.text-center.lead.mt-3 Welcome #{user.name} 
+                    a.btn.btn-secondary.btn-block.mt-3(href="/users/logout") Logout
+                    a.btn.btn-secondary.btn-block.mt-3(href="/contactus") Contact Us

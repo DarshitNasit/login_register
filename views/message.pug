@@ -1,0 +1,12 @@
+.messages
+    - var ftype
+    each type in Object.keys(messages)
+        if type === 'error'
+            - ftype = 'danger'
+        else
+            - ftype = type
+        each message in messages[type]
+            .alert.alert-dismissible.fade.show(class='alert-'+ftype role='alert')
+                | #{message}
+                button.close(type="button" data-dismiss="alert" aria-label="Close")
+                    span(aria-hidden="true") &times;

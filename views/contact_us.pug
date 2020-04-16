@@ -1,0 +1,22 @@
+extends layout2
+
+block content
+    .row.mt-5
+        .col-md-6.m-auto
+            .card.card-body
+                h1.text-center.mb-3
+                    i.fas.fa-phone(area-hidden='true')
+                    |   Contact Us
+                != messages('message', locals)
+                form(action='/contactus' method='POST')
+                    .form-group
+                        label(for='name') Full Name
+                        input.form-control(type='name' id='name' name='name' placeholder='Enter Full Name')
+                    .form-group
+                        label(for='email') Email
+                        input.form-control(type='email' id='email' name='email' placeholder='Enter Email')
+                    .form-group
+                        label(for='message') Message
+                        input.form-control(type='textarea' id='message' name='message' placeholder='Write up a message')
+                    button.btn.btn-primary.btn-block(type='submit') Send
+                    
